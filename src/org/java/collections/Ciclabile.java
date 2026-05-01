@@ -11,6 +11,22 @@ public class Ciclabile {
 
     };
 
+    public Ciclabile(){
+        this.interi = new int[0];
+    };
+
+    void addElemento(int elemento){
+        int[] arrayTransizione = new int [this.interi.length + 1];
+
+        for(int i=0; i < this.interi.length; i++){
+                arrayTransizione[i] = this.interi[i];
+        }
+
+        arrayTransizione[arrayTransizione.length - 1] = elemento;
+        this.interi = arrayTransizione;
+ 
+    }
+
     int getElementoSuccessivo(){
         int elementoCorrente = interi[i];
         i++;
